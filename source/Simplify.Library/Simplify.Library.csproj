@@ -44,8 +44,6 @@
     <Compile Include="Extensions\System.ComponentModel.cs" />
     <Compile Include="Extensions\System.cs" />
     <Compile Include="Extensions\System.Reflection.cs" />
-    <Compile Include="Internal\MemberDefinition.cs" />
-    <Compile Include="Internal\TypeDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
