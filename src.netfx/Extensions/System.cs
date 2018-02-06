@@ -21,7 +21,7 @@ namespace System
         public static TEnum ToEnum<TEnum>(this string value) where TEnum : struct, IConvertible, IComparable, IFormattable
         {
             if(!typeof(TEnum).IsEnum)
-                throw new ArgumentException($"Type argument must be an enumeration type.", nameof(TEnum));
+                throw new ArgumentException("Invalid Enum type", nameof(TEnum));
 
             return (TEnum)Enum.Parse(typeof(TEnum), value, true);
         }
@@ -29,27 +29,25 @@ namespace System
         public static TEnum ToEnum<TEnum>(this string value, bool ignoreCase) where TEnum : struct, IConvertible, IComparable, IFormattable
         {
             if(!typeof(TEnum).IsEnum)
-                throw new ArgumentException($"Type argument must be an enumeration type.", nameof(TEnum));
+                throw new ArgumentException("Invalid Enum type", nameof(TEnum));
 
             return (TEnum)Enum.Parse(typeof(TEnum), value, ignoreCase);
         }
 
-        public static TEnum ToEnum<TEnum>(object value) where TEnum : struct, IConvertible, IComparable, IFormattable
+        public static TEnum ToEnum<TEnum>(object value) where TEnum : struct
         {
             if(value == null)
                 throw new ArgumentNullException(nameof(value));
 
-            else if(value.GetType() == typeof(TEnum))
+            if(value.GetType() == typeof(TEnum))
                 return (TEnum)value;
 
-            else if(!typeof(TEnum).IsEnum)
-                throw new ArgumentException($"Type argument must be an enumeration type.");
-
-            else if(Enum.IsDefined(typeof(TEnum), value))
+            if(Enum.IsDefined(typeof(TEnum), value))
                 return (TEnum)value;
 
             return (TEnum)Enum.Parse(typeof(TEnum), value.ToString(), true);
         }
+
     }
 
     #endregion
@@ -83,7 +81,7 @@ namespace System
 
                 var typeArgNames = type.GetGenericArguments()?.Select(a => a.GetName());
 
-                typeName = $"{typeName}<{string.Join(", ", typeArgNames)}>";
+                typeName = $"{typeName}<{typeArgNames.ConcatValues(", ")}>";
             }
 
             return typeName;
