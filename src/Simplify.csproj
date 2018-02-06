@@ -5,7 +5,7 @@
     <Authors>Tony Bonura</Authors>
     <Company />
     <Description>A lightweight, cross-platform ADO.NET wrapper with natural object/relational mapping.</Description>
-    <Copyright />
+    <Copyright>Copyright © Tony Bonura 2018</Copyright>
     <PackageLicenseUrl>https://github.com/tonybonura/Simplify/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/tonybonura/Simplify</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
