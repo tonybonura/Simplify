@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplify.Library", "Simplify.Library\Simplify.Library.csproj", "{CEDC29E7-7C07-4BF9-9406-7925F99C71FF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{53430902-E40C-468E-92D6-5A7B5AE44FAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplify", "Simplify.csproj", "{CEDC29E7-7C07-4BF9-9406-7925F99C71FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
