@@ -382,7 +382,7 @@ namespace System
 
     #region [-- TypeCode Extensions --]
 
-    internal static class TypeCodeExtensions
+    internal static class _TypeCodeExtensions
     {
         public static bool IsNumberType(this TypeCode typeCode)
         {
@@ -807,7 +807,7 @@ namespace System
             if(b == null)
                 throw new ArgumentNullException(nameof(b));
 
-            HashSet<Attribute> result = new HashSet<Attribute>(a.Distinct());
+            var result = new HashSet<Attribute>(a.Distinct());
 
             foreach(var attrB in b)
             {

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace System.ComponentModel
 {
-    public static class _ComponentModelExtensions
+    internal static class _ComponentModelExtensions
     {
         public static bool IsDefined<T>(this PropertyDescriptor descriptor) where T : Attribute
         {
